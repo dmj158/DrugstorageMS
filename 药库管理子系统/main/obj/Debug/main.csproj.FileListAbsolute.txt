@@ -1,0 +1,9 @@
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\bin\Debug\main.exe
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\bin\Debug\main.pdb
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\main.main.resources
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\main.Properties.Resources.resources
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\main.csproj.GenerateResource.Cache
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\main.exe
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\main.pdb
+C:\Users\Administrator.WIN-S0SEJJKKIMG\Desktop\zuoye\main\main\obj\Debug\main.login.resources
