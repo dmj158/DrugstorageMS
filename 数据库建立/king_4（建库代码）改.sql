@@ -143,7 +143,14 @@ CREATE TABLE tb_OutWarehouse
 		NOT NULL 
 	,OutDate 
 		DATE 
-		NOT NULL );
+		NOT NULL
+        ,UserNo
+		INT
+		Not NULL
+		CONSTRAINT fk_OutWarehouse_UserNo
+			FOREIGN KEY(UserNo)
+			REFERENCES tb_Pharmacy(UserNo));
+		
 	
 IF OBJECT_ID ('tb_Checker') IS NOT NULL 
 		DROP TABLE tb_Checker;
@@ -180,6 +187,9 @@ CREATE TABLE tb_Stock
 	,InDate
 		DATE 
 		NOT NULL 
+	,Firm
+		VARCHAR(50)
+		NOT NULL
 	,InPrice 
 		Float
 		NOT NULL 
@@ -191,11 +201,17 @@ CREATE TABLE tb_Stock
 		NOT NULL 
 		CONSTRAINT fk_Stock_ChNo
 			FOREIGN KEY(ChNo)
-			REFERENCES tb_Checker(ChNo));
+			REFERENCES tb_Checker(ChNo)
+	,DtProduct
+		DATE
+		NOT NULL
+	,DtFinal
+		DATE
+		NOT NULL);
 IF OBJECT_ID('tb_Priceadjust') IS NOT NULL
 	DROP TABLE tb_priceadjust;
 create TABLE tb_priceadjust
-	(PrNo
+	(PaNo
 		INT
 		NOT NULL
 		CONSTRAINT pk_priceadjust_PrNo
@@ -212,8 +228,14 @@ create TABLE tb_priceadjust
 		CONSTRAINT fk_Priceadjust_UserNo
 			FOREIGN KEY(UserNo)
 			REFERENCES tb_User(UserNo)
-	,PADate
+	,PaDate
 		DATE
+		NOT NUL
+	,BeforePrice
+		FLOAT
+		NOT NULL
+	,BehindPrice
+		FLOAT
 		NOT NULL);		
 		
 		
