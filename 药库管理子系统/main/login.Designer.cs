@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textuser = new System.Windows.Forms.TextBox();
+            this.textpasscode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.but_login = new System.Windows.Forms.Button();
             this.but_quit = new System.Windows.Forms.Button();
@@ -55,19 +55,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "密码";
             // 
-            // textBox1
+            // textuser
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 21);
-            this.textBox1.TabIndex = 2;
+            this.textuser.Location = new System.Drawing.Point(108, 53);
+            this.textuser.Name = "textuser";
+            this.textuser.Size = new System.Drawing.Size(110, 21);
+            this.textuser.TabIndex = 2;
             // 
-            // textBox2
+            // textpasscode
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 21);
-            this.textBox2.TabIndex = 3;
+            this.textpasscode.Location = new System.Drawing.Point(108, 93);
+            this.textpasscode.Name = "textpasscode";
+            this.textpasscode.Size = new System.Drawing.Size(110, 21);
+            this.textpasscode.TabIndex = 3;
             // 
             // label3
             // 
@@ -105,8 +105,8 @@
             this.Controls.Add(this.but_quit);
             this.Controls.Add(this.but_login);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textpasscode);
+            this.Controls.Add(this.textuser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "login";
@@ -121,8 +121,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textuser;
+        private System.Windows.Forms.TextBox textpasscode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button but_login;
         private System.Windows.Forms.Button but_quit;

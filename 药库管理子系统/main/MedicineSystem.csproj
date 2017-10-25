@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -66,11 +67,11 @@
     <Compile Include="Date.Designer.cs">
       <DependentUpon>Date.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="mainform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="mainform.Designer.cs">
+      <DependentUpon>mainform.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -119,8 +120,8 @@
     <EmbeddedResource Include="Date.resx">
       <DependentUpon>Date.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -148,6 +149,9 @@
     <EmbeddedResource Include="StockInquiry.resx">
       <DependentUpon>StockInquiry.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Struction.resx">
+      <DependentUpon>Struction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpDown.resx">
       <DependentUpon>UpDown.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +159,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -182,6 +187,9 @@
     <Compile Include="UpDown.Designer.cs">
       <DependentUpon>UpDown.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="picture\" />

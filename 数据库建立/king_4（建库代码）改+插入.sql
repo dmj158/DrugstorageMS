@@ -20,7 +20,7 @@ CREATE TABLE tb_MedicineType
 	,Type 
 		VARCHAR(50)
 		NOT NULL);
-INSERT tb_Medicine
+INSERT tb_MedicineType
 	(TypeNo
 	,Type)
 	VALUES
@@ -47,7 +47,7 @@ CREATE TABLE tb_Medicine
 		NOT NULL 
 		CONSTRAINT fk_Medicine_TypeNo
 			FOREIGN KEY(TypeNo)
-			REFERENCES tb_MedicineType(No)
+			REFERENCES tb_MedicineType(TypeNo)
 	,MFunction
 		VARCHAR(500)
 		NOT NULL 
@@ -69,7 +69,7 @@ INSERT tb_Medicine
 	(MedicineNo
 	,MedicineName
 	,TypeNo
-	,MFuntion
+	,MFunction
 	,PackingUnit
 	,BasicDose
 	,DoseUnit
@@ -123,7 +123,7 @@ CREATE TABLE tb_InWarehouse
 		INT 
 		NOT NULL 
 		CONSTRAINT pk_InWarehouse_No
-			PRIMARY KEY(No)
+			PRIMARY KEY(InNo)
 	,InDate
 		DATE 
 		NOT NULL 
@@ -196,19 +196,19 @@ CREATE TABLE tb_OutWarehouse
 		NOT NULL 
 	    CONSTRAINT fk_OutWarehouse_MedicineNo
 			FOREIGN KEY(MedicineNo)
-	        REFERENCES tb_Medicine(No)
+	        REFERENCES tb_Medicine(MedicineNo)
 	,OutAmount 
 		INT 
 		NOT NULL 
 	,OutDate 
 		DATE 
 		NOT NULL
-        ,UserNo
+    ,UserNo
 		INT
 		Not NULL
 		CONSTRAINT fk_OutWarehouse_UserNo
 			FOREIGN KEY(UserNo)
-			REFERENCES tb_Pharmacy(UserNo));
+			REFERENCES tb_User(UserNo));
 INSERT tb_OutWarehouse
 (OutNo
 ,PhNo
@@ -288,7 +288,7 @@ CREATE TABLE tb_Stock
 INSERT tb_Stock
 (StockNo
 ,MedicineNo
-,StocckAmount
+,StockAmount
 ,InDate
 ,Firm
 ,InPrice
@@ -300,14 +300,14 @@ VALUES
 ('1','1','1000','2017.10.16','杭州默沙东制药有限公司','30','40','1','2017.09.30','2019.09.30')
 ,('2','2','800','2017.10.16','浙江六和制药厂','25','45','1','2017.09.30','2018.09.30');
 
-IF OBJECT_ID('tb_PriceAdjust') IS NOT NULL
+IF OBJECT_ID('tb_priceadjust') IS NOT NULL
 	DROP TABLE tb_priceadjust;
 create TABLE tb_priceadjust
 	(PANo
 		INT
 		NOT NULL
 		CONSTRAINT pk_priceadjust_PrNo
-		PRIMARY KEY(PrNo)
+		PRIMARY KEY(PANo)
 	,MedicineNo
 		INT
 		NOT NULL
@@ -322,20 +322,20 @@ create TABLE tb_priceadjust
 			REFERENCES tb_User(UserNo)
 	,PADate
 		DATE
-		NOT NUL
+		NOT NULL
 	,BeforePrice
 		FLOAT
 		NOT NULL
 	,BehindPrice
 		FLOAT
 		NOT NULL);
-INSERT tb_PriceAdjust	
+INSERT tb_priceadjust	
 (PANo
 ,MedicineNo
 ,UserNo
 ,PADate
 ,BeforePrice
-,BehinfPrice)
+,BehindPrice)
 VALUES
 ('1','1','1','2017.10.16','40','39')
 ,('2','2','1','2017.10.16','45','42');
