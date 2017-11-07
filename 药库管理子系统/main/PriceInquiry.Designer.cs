@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Txt_Mname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.But_Pinquiry = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Comb_medicineName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Txt_Mname
-            // 
-            this.Txt_Mname.Location = new System.Drawing.Point(80, 13);
-            this.Txt_Mname.Name = "Txt_Mname";
-            this.Txt_Mname.Size = new System.Drawing.Size(100, 21);
-            this.Txt_Mname.TabIndex = 0;
             // 
             // label1
             // 
@@ -53,12 +46,13 @@
             // 
             // But_Pinquiry
             // 
-            this.But_Pinquiry.Location = new System.Drawing.Point(298, 9);
+            this.But_Pinquiry.Location = new System.Drawing.Point(311, 19);
             this.But_Pinquiry.Name = "But_Pinquiry";
             this.But_Pinquiry.Size = new System.Drawing.Size(75, 23);
             this.But_Pinquiry.TabIndex = 2;
             this.But_Pinquiry.Text = "查询";
             this.But_Pinquiry.UseVisualStyleBackColor = true;
+            this.But_Pinquiry.Click += new System.EventHandler(this.But_Pinquiry_Click);
             // 
             // dataGridView1
             // 
@@ -69,15 +63,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(465, 200);
             this.dataGridView1.TabIndex = 3;
             // 
+            // Comb_medicineName
+            // 
+            this.Comb_medicineName.FormattingEnabled = true;
+            this.Comb_medicineName.Location = new System.Drawing.Point(72, 21);
+            this.Comb_medicineName.Name = "Comb_medicineName";
+            this.Comb_medicineName.Size = new System.Drawing.Size(121, 20);
+            this.Comb_medicineName.TabIndex = 4;
+            // 
             // PriceInquiry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 473);
+            this.Controls.Add(this.Comb_medicineName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.But_Pinquiry);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Txt_Mname);
             this.Name = "PriceInquiry";
             this.Text = "调价查询";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -88,9 +90,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Txt_Mname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button But_Pinquiry;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox Comb_medicineName;
     }
 }

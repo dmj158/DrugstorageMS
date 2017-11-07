@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textuser = new System.Windows.Forms.TextBox();
             this.textpasscode = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.but_login = new System.Windows.Forms.Button();
             this.but_quit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -66,17 +65,9 @@
             // 
             this.textpasscode.Location = new System.Drawing.Point(108, 93);
             this.textpasscode.Name = "textpasscode";
+            this.textpasscode.PasswordChar = '*';
             this.textpasscode.Size = new System.Drawing.Size(110, 21);
             this.textpasscode.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 217);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(197, 12);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "注意：登陆验证失败将直接关闭系统";
             // 
             // but_login
             // 
@@ -96,6 +87,7 @@
             this.but_quit.TabIndex = 6;
             this.but_quit.Text = "退出 ";
             this.but_quit.UseVisualStyleBackColor = true;
+            this.but_quit.Click += new System.EventHandler(this.but_quit_Click);
             // 
             // login
             // 
@@ -104,7 +96,6 @@
             this.ClientSize = new System.Drawing.Size(292, 273);
             this.Controls.Add(this.but_quit);
             this.Controls.Add(this.but_login);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textpasscode);
             this.Controls.Add(this.textuser);
             this.Controls.Add(this.label2);
@@ -123,7 +114,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textuser;
         private System.Windows.Forms.TextBox textpasscode;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button but_login;
         private System.Windows.Forms.Button but_quit;
     }

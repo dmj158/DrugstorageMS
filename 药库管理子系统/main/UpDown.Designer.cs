@@ -111,6 +111,7 @@
             this.But_refresh.TabIndex = 7;
             this.But_refresh.Text = "刷新";
             this.But_refresh.UseVisualStyleBackColor = true;
+            this.But_refresh.Click += new System.EventHandler(this.But_refresh_Click);
             // 
             // But_Exit
             // 
@@ -120,6 +121,7 @@
             this.But_Exit.TabIndex = 8;
             this.But_Exit.Text = "退出";
             this.But_Exit.UseVisualStyleBackColor = true;
+            this.But_Exit.Click += new System.EventHandler(this.But_Exit_Click);
             // 
             // UpDown
             // 

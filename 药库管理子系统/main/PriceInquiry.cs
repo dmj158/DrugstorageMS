@@ -15,5 +15,10 @@ namespace main
         {
             InitializeComponent();
         }
+
+        private void But_Pinquiry_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

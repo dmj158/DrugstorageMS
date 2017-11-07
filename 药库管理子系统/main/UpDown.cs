@@ -16,7 +16,17 @@ namespace main
             InitializeComponent();
         }
 
+        private void But_refresh_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void But_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
 
         }
-    }
 }
+
