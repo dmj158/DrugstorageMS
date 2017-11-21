@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace main
 {
-    public partial class PriceInquiry : Form
+    public partial class description : Form
     {
-        public PriceInquiry()
+        public description()
         {
             InitializeComponent();
-        }
-
-        private void But_Pinquiry_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

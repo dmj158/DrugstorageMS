@@ -12,16 +12,16 @@ IF OBJECT_ID ('tb_MedicineType') IS NOT NULL
 		DROP TABLE tb_MedicineType ;
 GO 
 CREATE TABLE tb_MedicineType
-	(TypeNo
+	(No
 		INT 
 		NOT NULL 
 		CONSTRAINT pk_MedicineType_No
-			PRIMARY KEY(TypeNo)
+			PRIMARY KEY(No)
 	,Type 
 		VARCHAR(50)
 		NOT NULL);
 INSERT tb_MedicineType
-	(TypeNo
+	(No
 	,Type)
 	VALUES
 	('1','øπµ®ºÓ“©')
@@ -34,12 +34,12 @@ IF OBJECT_ID ('tb_Medicine') IS NOT NULL
 		DROP TABLE tb_Medicine ;
 GO 
 CREATE TABLE tb_Medicine
-	(MedicineNo 
+	(No 
 		INT 
 		NOT NULL 
 		CONSTRAINT pk_Medicine_No
-			PRIMARY KEY(MedicineNo)
-	,MedicineName
+			PRIMARY KEY(No)
+	,Name
 		VARCHAR(50)
 		NOT NULL
 	,TypeNo
@@ -47,7 +47,7 @@ CREATE TABLE tb_Medicine
 		NOT NULL 
 		CONSTRAINT fk_Medicine_TypeNo
 			FOREIGN KEY(TypeNo)
-			REFERENCES tb_MedicineType(TypeNo)
+			REFERENCES tb_MedicineType(No)
 	,MFunction
 		VARCHAR(500)
 		NOT NULL 
@@ -62,12 +62,12 @@ CREATE TABLE tb_Medicine
 		NOT NULL
 	, 
 	Guarantee
-		INT 
+		VARCHAR(MAX) 
 		NOT NULL 
 	);
 INSERT tb_Medicine
-	(MedicineNo
-	,MedicineName
+	(No
+	,Name
 	,TypeNo
 	,MFunction
 	,PackingUnit
@@ -94,20 +94,20 @@ IF OBJECT_ID ('tb_User') IS NOT NULL
 		DROP TABLE tb_User ;
 GO 
 CREATE TABLE tb_User
-	(UserNo
+	(No
 		INT 
 		NOT NULL 
 		CONSTRAINT pk_User_No
-			PRIMARY KEY(UserNo)
-	,UserName
+			PRIMARY KEY(No)
+	,Name
 		VARCHAR(20)
 		NOT NULL 
 	,PassCode
-		VARBINARY(MAX)
+		VARCHAR(MAX)
 		NOT NULL );
 INSERT tb_User
-	(UserNo
-	,UserName
+	(No
+	,Name
 	,PassCode)
 	VALUES
 ('1','admin1','123')
@@ -132,13 +132,13 @@ CREATE TABLE tb_InWarehouse
 		NOT NULL 
 		CONSTRAINT fk_InWarehouse_UserNo
 			FOREIGN KEY(UserNo)
-			REFERENCES tb_User(UserNo)
-	,MedicineName
-		INT 
+			REFERENCES tb_User(No)
+	,MedicineNo
+		INT  
 		NOT NULL 
 		CONSTRAINT fk_InWarehouse_MedicineNo
-			FOREIGN KEY(MedicineName)
-			REFERENCES tb_MEdicine(MedicineNo)
+			FOREIGN KEY(MedicineNo)
+			REFERENCES tb_Medicine(No)
 	,InAmount 
 		INT 
 		NOT NULL 
@@ -149,28 +149,28 @@ INSERT tb_InWarehouse
 (InNo
 ,InDate
 ,UserNo
-,MedicineName
+,MedicineNo
 ,InAmount
 ,InPrice)
 VALUES
-('171016001','2017.10.16','1','µÿŒ˜„˙∆¨','300','25')
-,('171016002','2017.10.16','2','¡ÚÀ·∞¢Õ–∆∑∆¨','300','15');
+('171016001','2017.10.16','1','1','300','25')
+,('171016002','2017.10.16','2','2','300','15');
 
 	    
 IF OBJECT_ID ('tb_Pharmacy') IS NOT NULL 
 		DROP TABLE tb_Pharmacy;
 GO 
 CREATE TABLE tb_Pharmacy		
-	(PhNo 
+	(No 
 		INT 
 		NOT NULL 
 		CONSTRAINT pk_Pharmacy_No
-			PRIMARY KEY(PhNo)
+			PRIMARY KEY(No)
 	,Type 
 		VARCHAR(10)
 		NOT NULL );
 INSERT tb_Pharmacy
-(PhNo
+(No
 ,Type)
 VALUES
 ('01','√≈’Ô“©∑ø')
@@ -190,13 +190,13 @@ CREATE TABLE tb_OutWarehouse
 		NOT NULL 
 		CONSTRAINT fk_OutWarehouse_PhNo
 			FOREIGN KEY(PhNo)
-			REFERENCES tb_Pharmacy(PhNo)	
+			REFERENCES tb_Pharmacy(No)	
 	,MedicineNo
 		INT 
 		NOT NULL 
 	    CONSTRAINT fk_OutWarehouse_MedicineNo
 			FOREIGN KEY(MedicineNo)
-	        REFERENCES tb_Medicine(MedicineNo)
+	        REFERENCES tb_Medicine(No)
 	,OutAmount 
 		INT 
 		NOT NULL 
@@ -208,7 +208,7 @@ CREATE TABLE tb_OutWarehouse
 		Not NULL
 		CONSTRAINT fk_OutWarehouse_UserNo
 			FOREIGN KEY(UserNo)
-			REFERENCES tb_User(UserNo));
+			REFERENCES tb_User(No));
 INSERT tb_OutWarehouse
 (OutNo
 ,PhNo
@@ -217,8 +217,8 @@ INSERT tb_OutWarehouse
 ,OutDate
 ,UserNo)
 VALUES
-('171016001','1','1','50','1996.10.16','1')
-,('171016002','2','2','30','1996.10.16','1');
+('171016001','1','1','50','2017.10.16','1')
+,('171016002','2','2','30','2017.10.16','1');
 
 		
 	
@@ -226,17 +226,17 @@ IF OBJECT_ID ('tb_Checker') IS NOT NULL
 		DROP TABLE tb_Checker;
 GO 
 CREATE TABLE tb_Checker
-	(ChNo 
+	(No 
 		INT 
 		NOT NULL
 		CONSTRAINT pk_Checker_No
-			PRIMARY KEY(ChNo) 
+			PRIMARY KEY(No) 
 	,ChName 
 		VARCHAR(20)
 		NOT NULL
 	);
 INSERT tb_Checker
-(ChNo
+(No
 ,ChName)
 VALUES
 ('1','¿Ó∞◊')
@@ -257,7 +257,7 @@ CREATE TABLE tb_Stock
 		NOT NULL 
 		CONSTRAINT fk_Stock_MedicineNo
 			FOREIGN KEY(MedicineNo)
-			REFERENCES tb_Medicine(MedicineNo)
+			REFERENCES tb_Medicine(No)
 	,StockAmount
 		INT 
 		NOT NULL 
@@ -265,7 +265,7 @@ CREATE TABLE tb_Stock
 		DATE 
 		NOT NULL 
 	,Firm
-		VARCHAR(50)
+		VARCHAR(MAX)
 		NOT NULL
 	,InPrice 
 		Float
@@ -278,7 +278,7 @@ CREATE TABLE tb_Stock
 		NOT NULL 
 		CONSTRAINT fk_Stock_ChNo
 			FOREIGN KEY(ChNo)
-			REFERENCES tb_Checker(ChNo)
+			REFERENCES tb_Checker(No)
 	,DtProduct
 		DATE
 		NOT NULL
@@ -313,13 +313,13 @@ create TABLE tb_priceadjust
 		NOT NULL
 		CONSTRAINT fk_Priceadjust_MedicineNo
 			FOREIGN KEY(MedicineNo)
-			REFERENCES tb_Medicine(MedicineNo)
+			REFERENCES tb_Medicine(No)
 	,UserNo
 		INT 
 		NOT NULL
 		CONSTRAINT fk_Priceadjust_UserNo
 			FOREIGN KEY(UserNo)
-			REFERENCES tb_User(UserNo)
+			REFERENCES tb_User(No)
 	,PADate
 		DATE
 		NOT NULL
