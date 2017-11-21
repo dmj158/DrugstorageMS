@@ -62,16 +62,24 @@ namespace main
 
         private void InStock_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             instock f = new instock();
            
+=======
+            BuyIn f = new BuyIn();
+>>>>>>> origin/master
             f.Show();
 
         }
 
         private void In_inquiry_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             InStockQ f = new InStockQ();
             
+=======
+            InStock f = new InStock();
+>>>>>>> origin/master
             f.Show();
 
         }
@@ -79,13 +87,17 @@ namespace main
         private void Out_inquiry_Click(object sender, EventArgs e)
         {
             OutStockInquiry f=new OutStockInquiry();
+<<<<<<< HEAD
             
+=======
+>>>>>>> origin/master
             f.Show();
         }
 
         private void S_inquiry_Click(object sender, EventArgs e)
         {
             StockInquiry f = new StockInquiry();
+<<<<<<< HEAD
             
             f.Show();
         }
@@ -149,6 +161,13 @@ namespace main
         {
             alterpsw f = new alterpsw();
             f.Show();
+=======
+            f.Show();
+        }
+
+        private void Instruction_Click(object sender, EventArgs e)
+        {
+>>>>>>> origin/master
 
         }
     }

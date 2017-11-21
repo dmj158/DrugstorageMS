@@ -47,8 +47,11 @@ namespace main
             if (rowCount == 1)                                                              //若查得所输用户号相应的1行记录；
             {
                 MessageBox.Show("登录成功!");
+<<<<<<< HEAD
                 Userhelper.user = textuser.Text;
                 Userhelper.psw = textpasscode.Text;
+=======
+>>>>>>> origin/master
                 this.Hide();
                 mainform f = new mainform();
                 f.Show();
@@ -67,7 +70,11 @@ namespace main
 
         private void but_quit_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             System.Environment.Exit(0);
+=======
+            this.Close();
+>>>>>>> origin/master
         }
 
 
