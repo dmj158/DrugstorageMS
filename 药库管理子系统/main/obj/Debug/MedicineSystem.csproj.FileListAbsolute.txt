@@ -58,10 +58,6 @@ C:\DrugstorageMS\药库管理子系统\main\bin\Debug\main.exe
 C:\DrugstorageMS\药库管理子系统\main\bin\Debug\main.pdb
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\ResolveAssemblyReference.cache
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.Buy.resources
-<<<<<<< HEAD
-=======
-C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.BuyIn.resources
->>>>>>> origin/master
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.Date.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.mainform.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.login.resources
@@ -72,7 +68,6 @@ C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.PriceInquiry.resource
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.Price_Medicine.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.Properties.Resources.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.StockInquiry.resources
-<<<<<<< HEAD
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.UpDown.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\MedicineSystem.csproj.GenerateResource.Cache
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.outstock.resources
@@ -80,8 +75,27 @@ C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.description.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.InStockQ.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.MedicineInfo.resources
 C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.alterpsw.resources
-=======
-C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.Struction.resources
-C:\DrugstorageMS\药库管理子系统\main\obj\Debug\main.UpDown.resources
-C:\DrugstorageMS\药库管理子系统\main\obj\Debug\MedicineSystem.csproj.GenerateResource.Cache
->>>>>>> origin/master
+C:\Users\fj8\Desktop\药库管理子系统\main\bin\Debug\main.exe.config
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.exe
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.pdb
+C:\Users\fj8\Desktop\药库管理子系统\main\bin\Debug\main.exe
+C:\Users\fj8\Desktop\药库管理子系统\main\bin\Debug\main.pdb
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.alterpsw.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.Buy.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.Date.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.instock.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.mainform.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.login.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.InStockQ.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.MedicineInfo.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.outstock.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.OutStockInquiry.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.Pharmacy.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.PriceInquiry.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.Price_Medicine.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.Properties.Resources.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.StockInquiry.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.description.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\main.UpDown.resources
+C:\Users\fj8\Desktop\药库管理子系统\main\obj\Debug\MedicineSystem.csproj.GenerateResource.Cache

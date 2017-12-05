@@ -68,11 +68,7 @@
             this.textpasscode.Location = new System.Drawing.Point(465, 250);
             this.textpasscode.Name = "textpasscode";
             this.textpasscode.PasswordChar = '*';
-<<<<<<< HEAD
             this.textpasscode.Size = new System.Drawing.Size(149, 21);
-=======
-            this.textpasscode.Size = new System.Drawing.Size(110, 21);
->>>>>>> origin/master
             this.textpasscode.TabIndex = 3;
             // 
             // but_login

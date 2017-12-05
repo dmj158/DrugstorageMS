@@ -32,7 +32,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.price = new System.Windows.Forms.ToolStripMenuItem();
             this.Price_Medicine = new System.Windows.Forms.ToolStripMenuItem();
-            this.MinMax = new System.Windows.Forms.ToolStripMenuItem();
+            this.updown = new System.Windows.Forms.ToolStripMenuItem();
             this.药品保质期预警ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.入库管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InStock = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +45,6 @@
             this.调价查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.药品基本信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Buy_inquiry = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
             this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加操作员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.更改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,14 +52,10 @@
             this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.sstlusername = new System.Windows.Forms.StatusStrip();
+            this.sspsw = new System.Windows.Forms.ToolStripStatusLabel();
             this.sstlpsw = new System.Windows.Forms.StatusStrip();
             this.ssusername = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sspsw = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-=======
-            this.Instruction = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
->>>>>>> origin/master
             this.menuStrip1.SuspendLayout();
             this.sstlusername.SuspendLayout();
             this.sstlpsw.SuspendLayout();
@@ -78,12 +73,8 @@
             this.用户管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-<<<<<<< HEAD
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(924, 28);
-=======
-            this.menuStrip1.Size = new System.Drawing.Size(792, 25);
->>>>>>> origin/master
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -92,27 +83,20 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.price,
-            this.MinMax,
+            this.updown,
             this.药品保质期预警ToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-<<<<<<< HEAD
             this.toolStripMenuItem1.Size = new System.Drawing.Size(77, 24);
-=======
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 21);
->>>>>>> origin/master
             this.toolStripMenuItem1.Text = "库存管理";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // price
             // 
             this.price.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Price_Medicine});
             this.price.Name = "price";
-<<<<<<< HEAD
             this.price.Size = new System.Drawing.Size(176, 24);
-=======
-            this.price.Size = new System.Drawing.Size(160, 22);
->>>>>>> origin/master
             this.price.Text = "调价管理";
             this.price.Click += new System.EventHandler(this.price_Click);
             // 
@@ -122,26 +106,14 @@
             this.Price_Medicine.Size = new System.Drawing.Size(134, 24);
             this.Price_Medicine.Text = "药品调价";
             this.Price_Medicine.Click += new System.EventHandler(this.Price_Medicine_Click);
-<<<<<<< HEAD
-=======
             // 
-            // PriceInquiry
+            // updown
             // 
-            this.PriceInquiry.Name = "PriceInquiry";
-            this.PriceInquiry.Size = new System.Drawing.Size(152, 22);
-            this.PriceInquiry.Text = "调价查询";
-            this.PriceInquiry.Click += new System.EventHandler(this.PriceInquiry_Click);
->>>>>>> origin/master
-            // 
-            // MinMax
-            // 
-            this.MinMax.Name = "MinMax";
-<<<<<<< HEAD
-            this.MinMax.Size = new System.Drawing.Size(176, 24);
-=======
-            this.MinMax.Size = new System.Drawing.Size(160, 22);
->>>>>>> origin/master
-            this.MinMax.Text = "药品上下限管理";
+            this.updown.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
+            this.updown.Name = "updown";
+            this.updown.Size = new System.Drawing.Size(176, 24);
+            this.updown.Text = "药品库存预警";
+            this.updown.Click += new System.EventHandler(this.updown_Click_1);
             // 
             // 药品保质期预警ToolStripMenuItem
             // 
@@ -153,25 +125,16 @@
             // 
             this.入库管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.InStock});
-<<<<<<< HEAD
             this.入库管理ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.入库管理ToolStripMenuItem.Name = "入库管理ToolStripMenuItem";
             this.入库管理ToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-=======
-            this.入库管理ToolStripMenuItem.Name = "入库管理ToolStripMenuItem";
-            this.入库管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
->>>>>>> origin/master
             this.入库管理ToolStripMenuItem.Text = "入库管理";
             this.入库管理ToolStripMenuItem.Click += new System.EventHandler(this.入库管理ToolStripMenuItem_Click);
             // 
             // InStock
             // 
             this.InStock.Name = "InStock";
-<<<<<<< HEAD
-            this.InStock.Size = new System.Drawing.Size(152, 24);
-=======
-            this.InStock.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
+            this.InStock.Size = new System.Drawing.Size(134, 24);
             this.InStock.Text = "入库录入";
             this.InStock.Click += new System.EventHandler(this.InStock_Click);
             // 
@@ -181,26 +144,16 @@
             this.outstock});
             this.出库管理ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.出库管理ToolStripMenuItem.Name = "出库管理ToolStripMenuItem";
-<<<<<<< HEAD
             this.出库管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-=======
-            this.出库管理ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
->>>>>>> origin/master
             this.出库管理ToolStripMenuItem.Text = "出库管理 ";
             this.出库管理ToolStripMenuItem.Click += new System.EventHandler(this.出库管理ToolStripMenuItem_Click);
             // 
             // outstock
             // 
-<<<<<<< HEAD
             this.outstock.Name = "outstock";
-            this.outstock.Size = new System.Drawing.Size(152, 24);
+            this.outstock.Size = new System.Drawing.Size(134, 24);
             this.outstock.Text = "出库录入";
             this.outstock.Click += new System.EventHandler(this.outstock_Click);
-=======
-            this.PharmacyOut.Name = "PharmacyOut";
-            this.PharmacyOut.Size = new System.Drawing.Size(124, 22);
-            this.PharmacyOut.Text = "二级药房";
->>>>>>> origin/master
             // 
             // 查询管理ToolStripMenuItem
             // 
@@ -212,72 +165,47 @@
             this.药品基本信息查询ToolStripMenuItem});
             this.查询管理ToolStripMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.查询管理ToolStripMenuItem.Name = "查询管理ToolStripMenuItem";
-<<<<<<< HEAD
             this.查询管理ToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-=======
-            this.查询管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
->>>>>>> origin/master
             this.查询管理ToolStripMenuItem.Text = "查询管理";
             // 
             // S_inquiry
             // 
             this.S_inquiry.Name = "S_inquiry";
-<<<<<<< HEAD
             this.S_inquiry.Size = new System.Drawing.Size(190, 24);
-=======
-            this.S_inquiry.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
             this.S_inquiry.Text = "库存查询";
             this.S_inquiry.Click += new System.EventHandler(this.S_inquiry_Click);
             // 
             // Out_inquiry
             // 
             this.Out_inquiry.Name = "Out_inquiry";
-<<<<<<< HEAD
             this.Out_inquiry.Size = new System.Drawing.Size(190, 24);
-=======
-            this.Out_inquiry.Size = new System.Drawing.Size(152, 22);
->>>>>>> origin/master
             this.Out_inquiry.Text = "出库查询";
             this.Out_inquiry.Click += new System.EventHandler(this.Out_inquiry_Click);
             // 
             // In_inquiry
             // 
             this.In_inquiry.Name = "In_inquiry";
-<<<<<<< HEAD
             this.In_inquiry.Size = new System.Drawing.Size(190, 24);
             this.In_inquiry.Text = "入库查询";
             this.In_inquiry.Click += new System.EventHandler(this.In_inquiry_Click);
             // 
             // 调价查询ToolStripMenuItem
-=======
-            this.In_inquiry.Size = new System.Drawing.Size(152, 22);
-            this.In_inquiry.Text = "入库查询";
-            this.In_inquiry.Click += new System.EventHandler(this.In_inquiry_Click);
->>>>>>> origin/master
             // 
             this.调价查询ToolStripMenuItem.Name = "调价查询ToolStripMenuItem";
             this.调价查询ToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.调价查询ToolStripMenuItem.Text = "调价查询";
             // 
-<<<<<<< HEAD
             // 药品基本信息查询ToolStripMenuItem
             // 
             this.药品基本信息查询ToolStripMenuItem.Name = "药品基本信息查询ToolStripMenuItem";
             this.药品基本信息查询ToolStripMenuItem.Size = new System.Drawing.Size(190, 24);
             this.药品基本信息查询ToolStripMenuItem.Text = "药品基本信息查询";
             this.药品基本信息查询ToolStripMenuItem.Click += new System.EventHandler(this.药品基本信息查询ToolStripMenuItem_Click);
-=======
-            this.Date_inquiry.Name = "Date_inquiry";
-            this.Date_inquiry.Size = new System.Drawing.Size(152, 22);
-            this.Date_inquiry.Text = "日期预警";
->>>>>>> origin/master
             // 
             // Buy_inquiry
             // 
             this.Buy_inquiry.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Buy_inquiry.Name = "Buy_inquiry";
-<<<<<<< HEAD
             this.Buy_inquiry.Size = new System.Drawing.Size(81, 24);
             this.Buy_inquiry.Text = "采购管理 ";
             // 
@@ -296,46 +224,34 @@
             // 添加操作员ToolStripMenuItem
             // 
             this.添加操作员ToolStripMenuItem.Name = "添加操作员ToolStripMenuItem";
-            this.添加操作员ToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.添加操作员ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.添加操作员ToolStripMenuItem.Text = "注销";
             this.添加操作员ToolStripMenuItem.Click += new System.EventHandler(this.添加操作员ToolStripMenuItem_Click);
             // 
             // 更改密码ToolStripMenuItem
             // 
             this.更改密码ToolStripMenuItem.Name = "更改密码ToolStripMenuItem";
-            this.更改密码ToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.更改密码ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.更改密码ToolStripMenuItem.Text = "更改密码";
             this.更改密码ToolStripMenuItem.Click += new System.EventHandler(this.更改密码ToolStripMenuItem_Click);
             // 
             // 系统说明ToolStripMenuItem
             // 
             this.系统说明ToolStripMenuItem.Name = "系统说明ToolStripMenuItem";
-            this.系统说明ToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.系统说明ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.系统说明ToolStripMenuItem.Text = "系统说明";
             this.系统说明ToolStripMenuItem.Click += new System.EventHandler(this.系统说明ToolStripMenuItem_Click);
             // 
             // 退出系统ToolStripMenuItem
             // 
             this.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem";
-            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.退出系统ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.退出系统ToolStripMenuItem.Text = "退出系统";
             this.退出系统ToolStripMenuItem.Click += new System.EventHandler(this.退出系统ToolStripMenuItem_Click);
-=======
-            this.Buy_inquiry.Size = new System.Drawing.Size(72, 21);
-            this.Buy_inquiry.Text = "采购管理 ";
-            // 
-            // Instruction
-            // 
-            this.Instruction.Name = "Instruction";
-            this.Instruction.Size = new System.Drawing.Size(44, 21);
-            this.Instruction.Text = "说明";
-            this.Instruction.Click += new System.EventHandler(this.Instruction_Click);
->>>>>>> origin/master
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(398, 237);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 14);
@@ -352,6 +268,14 @@
             this.sstlusername.Size = new System.Drawing.Size(924, 24);
             this.sstlusername.TabIndex = 7;
             this.sstlusername.Text = "statusStrip1";
+            // 
+            // sspsw
+            // 
+            this.sspsw.BackColor = System.Drawing.Color.White;
+            this.sspsw.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sspsw.Name = "sspsw";
+            this.sspsw.Size = new System.Drawing.Size(160, 19);
+            this.sspsw.Text = "toolStripStatusLabel2";
             // 
             // sstlpsw
             // 
@@ -371,16 +295,8 @@
             // 
             this.ssusername.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ssusername.Name = "ssusername";
-            this.ssusername.Size = new System.Drawing.Size(160, 17);
+            this.ssusername.Size = new System.Drawing.Size(160, 21);
             this.ssusername.Text = "toolStripStatusLabel1";
-            // 
-            // sspsw
-            // 
-            this.sspsw.BackColor = System.Drawing.Color.White;
-            this.sspsw.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sspsw.Name = "sspsw";
-            this.sspsw.Size = new System.Drawing.Size(160, 19);
-            this.sspsw.Text = "toolStripStatusLabel2";
             // 
             // pictureBox1
             // 
@@ -401,18 +317,6 @@
             this.ClientSize = new System.Drawing.Size(924, 552);
             this.Controls.Add(this.sstlpsw);
             this.Controls.Add(this.sstlusername);
-=======
-            this.label1.Location = new System.Drawing.Point(341, 203);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 12);
-            this.label1.TabIndex = 4;
-            // 
-            // mainform
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 473);
->>>>>>> origin/master
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
@@ -423,10 +327,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainform";
-<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-=======
->>>>>>> origin/master
             this.Text = "药库管理系统 1.0Copyright（C）2017 king_4小组";
             this.Load += new System.EventHandler(this.main_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainform_FormClosed);
@@ -446,7 +347,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem MinMax;
+        private System.Windows.Forms.ToolStripMenuItem updown;
         private System.Windows.Forms.ToolStripMenuItem price;
         private System.Windows.Forms.ToolStripMenuItem 入库管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem InStock;
@@ -458,7 +359,6 @@
         private System.Windows.Forms.ToolStripMenuItem In_inquiry;
         private System.Windows.Forms.ToolStripMenuItem Buy_inquiry;
         private System.Windows.Forms.ToolStripMenuItem Price_Medicine;
-<<<<<<< HEAD
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem 药品保质期预警ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 调价查询ToolStripMenuItem;
@@ -473,10 +373,6 @@
         private System.Windows.Forms.ToolStripStatusLabel sspsw;
         private System.Windows.Forms.ToolStripStatusLabel ssusername;
         private System.Windows.Forms.PictureBox pictureBox1;
-=======
-        private System.Windows.Forms.ToolStripMenuItem PriceInquiry;
-        private System.Windows.Forms.Label label1;
->>>>>>> origin/master
 
 
     }

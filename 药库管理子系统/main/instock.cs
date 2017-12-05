@@ -17,9 +17,41 @@ namespace main
         {
             InitializeComponent();
         }
+        bool CheckinId(string inid)
+        {
+            
+            bool check = true;
+            if (inid == "")
+            {
+                MessageBox.Show("入库编号不能为空！");
+                check = false;
+            }
+            else
+            {
+                SqlConnection sqlconnectioin = new SqlConnection();
+                sqlconnectioin.ConnectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+                sqlconnectioin.Open();
+                SqlCommand sqlcommand3 = new SqlCommand();
+                sqlcommand3.Connection = sqlconnectioin;
+                sqlcommand3.CommandText = "select count(*) from tb_InWarehouse where InNo=@Inno;";
+                sqlcommand3.Parameters.AddWithValue("@Inno", inid);
+                int rowcount = (int)sqlcommand3.ExecuteScalar();
+                if (rowcount == 1)
+                {
+                    MessageBox.Show("入库单编号已存在，请重新输入！");
+                    txt_InNo.Focus();
+                    txt_InNo.Text = "";
+                    check = false;
+                }
+
+
+            }
+            return check;
+        }
 
         private void instock_Load(object sender, EventArgs e)
         {
+            
             SqlConnection sqlconnection = new SqlConnection();
             sqlconnection.ConnectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
             SqlCommand sqlcommand1 = new SqlCommand();
@@ -55,30 +87,59 @@ namespace main
         private void But_InStock_Click(object sender, EventArgs e)
         {
 
+            string inid = txt_InNo.Text.Trim();
+            int a = Convert.ToInt32(txt_Inamount.Text.Trim());
+            if (CheckinId(inid) == false)
+            {
+                return;
+            }
            
-            SqlConnection sqlconnection=new SqlConnection();
+            SqlConnection sqlconnection =new SqlConnection();
             sqlconnection.ConnectionString=ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
             sqlconnection.Open();
             SqlCommand sqlcommand = new SqlCommand();
             sqlcommand.Connection = sqlconnection;
             sqlcommand.CommandText = "insert into tb_InWarehouse values(@inno,@indate,@userno,@medicineno,@inamount,@inprice);";
-            sqlcommand.Parameters.AddWithValue("@inno", this.txt_InNo.Text.Trim());                        
+            sqlcommand.Parameters.AddWithValue("@inno", inid);                        
             sqlcommand.Parameters.AddWithValue("@indate", this.dtp_Instockdate.Value.Date);
             sqlcommand.Parameters.AddWithValue("@userno", (int)this.comb_User.SelectedValue);
             sqlcommand.Parameters.AddWithValue("@medicineno", (int)this.comb_Medicinename.SelectedValue);
-            sqlcommand.Parameters.AddWithValue("@inamount", this.txt_Inamount.Text.Trim());
-            sqlcommand.Parameters.AddWithValue("@inprice", this.txt_Inprice.Text.Trim()); 
-      
+            sqlcommand.Parameters.AddWithValue("@inamount", a);
+            sqlcommand.Parameters.AddWithValue("@inprice", this.txt_Inprice.Text.Trim());
             int n = Convert.ToInt32(sqlcommand.ExecuteNonQuery());
-            if (n == 1)
-            {
-                MessageBox.Show("添加入库单成功！");
-            }
-            else 
-            {
-                MessageBox.Show("添加入库单失败！");
-            }
+            
+            
+            SqlCommand sqlCommand1 = new SqlCommand();
+
+            sqlCommand1.Connection = sqlconnection;
+            sqlCommand1.CommandText = "SELECT InNo,Name,InAmount,InPrice,InDate,UserNo FROM dbo.tb_InWarehouse  JOIN dbo.tb_Medicine  ON dbo.tb_InWarehouse.MedicineNo=dbo.tb_Medicine.NO WHERE InNo=@No;";
+            sqlCommand1.Parameters.AddWithValue("@No",txt_InNo.Text.Trim());
+            SqlDataAdapter sqlDataAdapter1 = new SqlDataAdapter();
+            sqlDataAdapter1.SelectCommand = sqlCommand1;
+            DataTable InWarehouse = new DataTable();
+            
+            sqlDataAdapter1.Fill(InWarehouse);
+            this.dgv_instock.Columns.Clear();
+            this.dgv_instock.DataSource = InWarehouse;
+            this.dgv_instock.ReadOnly = true;
+            this.dgv_instock.AllowUserToAddRows = false;
+            this.dgv_instock.Columns["InNo"].HeaderText = "入库批次";
+            this.dgv_instock.Columns["InDate"].HeaderText = "入库日期";
+            this.dgv_instock.Columns["UserNo"].HeaderText = "操作员编号";
+            this.dgv_instock.Columns["Name"].HeaderText = "药品名称";
+            this.dgv_instock.Columns["InAmount"].HeaderText = "入库数量";
+            this.dgv_instock.Columns["InPrice"].HeaderText = "进价";
+
+      
+            
             sqlconnection.Close();
+        }
+
+        private void bt_clear_Click(object sender, EventArgs e)
+        {
+            txt_InNo.Text = "";
+            txt_Inamount.Text = "";
+            txt_Inprice.Text = "";
         }
     }
 }

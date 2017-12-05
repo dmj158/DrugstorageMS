@@ -57,17 +57,10 @@
             // dgv_stock
             // 
             this.dgv_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.dgv_stock.Location = new System.Drawing.Point(-3, 110);
             this.dgv_stock.Name = "dgv_stock";
             this.dgv_stock.RowTemplate.Height = 23;
             this.dgv_stock.Size = new System.Drawing.Size(494, 210);
-=======
-            this.dgv_stock.Location = new System.Drawing.Point(27, 110);
-            this.dgv_stock.Name = "dgv_stock";
-            this.dgv_stock.RowTemplate.Height = 23;
-            this.dgv_stock.Size = new System.Drawing.Size(392, 210);
->>>>>>> origin/master
             this.dgv_stock.TabIndex = 3;
             // 
             // comb_stock

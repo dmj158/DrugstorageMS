@@ -64,6 +64,8 @@ namespace main
             if (i == 1)
             {
                 MessageBox.Show("修改成功!");
+                
+
 
             }
             else 

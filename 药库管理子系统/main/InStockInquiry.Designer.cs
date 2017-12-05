@@ -57,17 +57,10 @@
             // dgv_Inwarehouse
             // 
             this.dgv_Inwarehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.dgv_Inwarehouse.Location = new System.Drawing.Point(2, 79);
             this.dgv_Inwarehouse.Name = "dgv_Inwarehouse";
             this.dgv_Inwarehouse.RowTemplate.Height = 23;
             this.dgv_Inwarehouse.Size = new System.Drawing.Size(488, 196);
-=======
-            this.dgv_Inwarehouse.Location = new System.Drawing.Point(25, 79);
-            this.dgv_Inwarehouse.Name = "dgv_Inwarehouse";
-            this.dgv_Inwarehouse.RowTemplate.Height = 23;
-            this.dgv_Inwarehouse.Size = new System.Drawing.Size(443, 196);
->>>>>>> origin/master
             this.dgv_Inwarehouse.TabIndex = 3;
             // 
             // Comb_medicineName

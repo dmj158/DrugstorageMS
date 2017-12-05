@@ -19,7 +19,7 @@ namespace main
         }
         bool CheckoutId(string outid) 
         {
-            int b = Convert.ToInt32(txt_outId.Text.Trim());
+           
             bool check = true;
             if (outid == "")
             {
@@ -34,7 +34,7 @@ namespace main
                 SqlCommand sqlcommand3 = new SqlCommand();
                 sqlcommand3.Connection = sqlconnectioin;
                 sqlcommand3.CommandText = "select count(*) from tb_OutWarehouse where OutNo=@outno;";
-                sqlcommand3.Parameters.AddWithValue("@outno", b);
+                sqlcommand3.Parameters.AddWithValue("@outno", outid);
                 int rowcount = (int)sqlcommand3.ExecuteScalar();
                 if (rowcount == 1)
                 {
@@ -84,15 +84,17 @@ namespace main
             {
                 return;
             }
-            SqlConnection sqlconnectioin = new SqlConnection();
-            sqlconnectioin.ConnectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
-            sqlconnectioin.Open();
+            SqlConnection sqlconnection = new SqlConnection();
+            sqlconnection.ConnectionString = ConfigurationManager.ConnectionStrings["sql"].ConnectionString;
+            sqlconnection.Open();
             SqlCommand sqlcommand = new SqlCommand();
             SqlCommand sqlcommand2 = new SqlCommand();
+            SqlCommand sqlcommand3 = new SqlCommand();
             
            
-            sqlcommand.Connection = sqlconnectioin;
-            sqlcommand2.Connection = sqlconnectioin;
+            sqlcommand.Connection = sqlconnection;
+            sqlcommand2.Connection = sqlconnection;
+            sqlcommand3.Connection= sqlconnection;
           
             sqlcommand.CommandText = "insert into tb_OutWarehouse values(@OutNo,@phNo,@MedicineNo,@outamount,@outdate,@userno);";
             sqlcommand.Parameters.AddWithValue("@OutNo",txt_outId.Text.Trim());
@@ -106,18 +108,29 @@ namespace main
             sqlcommand2.Parameters.AddWithValue("@medicine", comb_Medicinename.SelectedValue);
             int n = Convert.ToInt32(sqlcommand.ExecuteNonQuery());
             int f = Convert.ToInt32(sqlcommand2.ExecuteNonQuery());
+            sqlcommand3.CommandText = "SELECT OutNo,Name,OutAmount,OutDate,PhNo,UserNo FROM dbo.tb_OutWarehouse  JOIN dbo.tb_Medicine  ON dbo.tb_OutWarehouse.MedicineNo=dbo.tb_Medicine.NO WHERE tb_Medicine.No='" + comb_Medicinename.SelectedValue.ToString() + "';";
+
+            SqlDataAdapter sqlDataAdapter1 = new SqlDataAdapter();
+            sqlDataAdapter1.SelectCommand = sqlcommand3;
+            DataTable OutWarehouse = new DataTable();
+            
+            sqlDataAdapter1.Fill(OutWarehouse);
+           
+            this.dgv_outstock.Columns.Clear();
+            this.dgv_outstock.DataSource = OutWarehouse;
+            this.dgv_outstock.ReadOnly = true;
+            this.dgv_outstock.AllowUserToAddRows = false;
+            
+            this.dgv_outstock.Columns["OutNo"].HeaderText = "出库批次";
+            this.dgv_outstock.Columns["PhNo"].HeaderText = "二级药房编号";
+            this.dgv_outstock.Columns["Name"].HeaderText = "药品名称";
+            this.dgv_outstock.Columns["OutAmount"].HeaderText = "出库量";
+            this.dgv_outstock.Columns["OutDate"].HeaderText = "出库日期";
+            this.dgv_outstock.Columns["UserNo"].HeaderText = "操作员编号";
             
 
-            if (n == 1&&f==1)
-            {
-                MessageBox.Show("添加出库单成功！");
-
-            }
-            else 
-            {
-                MessageBox.Show("添加出库单失败！");
-            }
-            sqlconnectioin.Close();
+            
+            sqlconnection.Close();
         }
 
         private void outstock_Load(object sender, EventArgs e)
@@ -190,6 +203,17 @@ namespace main
         private void But_ExitInstock_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txt_outId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txt_outId.Text = "";
+            txt_outamount.Text = "";
         }
     }
 }

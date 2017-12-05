@@ -27,7 +27,7 @@ namespace main
         private void price_Click(object sender, EventArgs e)
         {
             Price_Medicine P = new Price_Medicine();
-           
+            P.StartPosition = FormStartPosition.CenterScreen;
             P.Show();
         }
 
@@ -62,24 +62,16 @@ namespace main
 
         private void InStock_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             instock f = new instock();
-           
-=======
-            BuyIn f = new BuyIn();
->>>>>>> origin/master
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
 
         }
 
         private void In_inquiry_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             InStockQ f = new InStockQ();
-            
-=======
-            InStock f = new InStock();
->>>>>>> origin/master
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
 
         }
@@ -87,18 +79,14 @@ namespace main
         private void Out_inquiry_Click(object sender, EventArgs e)
         {
             OutStockInquiry f=new OutStockInquiry();
-<<<<<<< HEAD
-            
-=======
->>>>>>> origin/master
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 
         private void S_inquiry_Click(object sender, EventArgs e)
         {
             StockInquiry f = new StockInquiry();
-<<<<<<< HEAD
-            
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 
@@ -106,7 +94,7 @@ namespace main
         private void outstock_Click(object sender, EventArgs e)
         {
             outstock f = new outstock();
-            
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 
@@ -118,7 +106,7 @@ namespace main
         private void 药品基本信息查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MedicineInfo f = new MedicineInfo();
-            
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 
@@ -130,7 +118,8 @@ namespace main
         private void 系统说明ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             description f = new description();
-            
+
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
         }
 
@@ -146,7 +135,7 @@ namespace main
             {
                 this.Hide();
             login f = new login();
-         
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
             }
            
@@ -160,14 +149,23 @@ namespace main
         private void 更改密码ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             alterpsw f = new alterpsw();
+            f.StartPosition = FormStartPosition.CenterScreen;
             f.Show();
-=======
-            f.Show();
+
         }
 
-        private void Instruction_Click(object sender, EventArgs e)
+        
+
+        private void updown_Click_1(object sender, EventArgs e)
         {
->>>>>>> origin/master
+            UpDown f = new UpDown();
+            f.StartPosition = FormStartPosition.CenterScreen;
+            f.Show();
+            
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Amount = new System.Windows.Forms.TextBox();
-            this.rBut_high = new System.Windows.Forms.RadioButton();
-            this.rBut_Low = new System.Windows.Forms.RadioButton();
+            this.But_high = new System.Windows.Forms.RadioButton();
+            this.But_Low = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_MName = new System.Windows.Forms.TextBox();
@@ -56,27 +56,27 @@
             this.Txt_Amount.Size = new System.Drawing.Size(100, 21);
             this.Txt_Amount.TabIndex = 1;
             // 
-            // rBut_high
+            // But_high
             // 
-            this.rBut_high.AutoSize = true;
-            this.rBut_high.Location = new System.Drawing.Point(227, 21);
-            this.rBut_high.Name = "rBut_high";
-            this.rBut_high.Size = new System.Drawing.Size(71, 16);
-            this.rBut_high.TabIndex = 2;
-            this.rBut_high.TabStop = true;
-            this.rBut_high.Text = "高储报警";
-            this.rBut_high.UseVisualStyleBackColor = true;
+            this.But_high.AutoSize = true;
+            this.But_high.Location = new System.Drawing.Point(227, 21);
+            this.But_high.Name = "But_high";
+            this.But_high.Size = new System.Drawing.Size(71, 16);
+            this.But_high.TabIndex = 2;
+            this.But_high.TabStop = true;
+            this.But_high.Text = "高储报警";
+            this.But_high.UseVisualStyleBackColor = true;
             // 
-            // rBut_Low
+            // But_Low
             // 
-            this.rBut_Low.AutoSize = true;
-            this.rBut_Low.Location = new System.Drawing.Point(341, 21);
-            this.rBut_Low.Name = "rBut_Low";
-            this.rBut_Low.Size = new System.Drawing.Size(71, 16);
-            this.rBut_Low.TabIndex = 3;
-            this.rBut_Low.TabStop = true;
-            this.rBut_Low.Text = "低储报警";
-            this.rBut_Low.UseVisualStyleBackColor = true;
+            this.But_Low.AutoSize = true;
+            this.But_Low.Location = new System.Drawing.Point(341, 21);
+            this.But_Low.Name = "But_Low";
+            this.But_Low.Size = new System.Drawing.Size(71, 16);
+            this.But_Low.TabIndex = 3;
+            this.But_Low.TabStop = true;
+            this.But_Low.Text = "低储报警";
+            this.But_Low.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -133,12 +133,12 @@
             this.Controls.Add(this.Txt_MName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.rBut_Low);
-            this.Controls.Add(this.rBut_high);
+            this.Controls.Add(this.But_Low);
+            this.Controls.Add(this.But_high);
             this.Controls.Add(this.Txt_Amount);
             this.Controls.Add(this.label1);
             this.Name = "UpDown";
-            this.Text = "UpDown";
+            this.Text = "药品库存预警";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -149,8 +149,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_Amount;
-        private System.Windows.Forms.RadioButton rBut_high;
-        private System.Windows.Forms.RadioButton rBut_Low;
+        private System.Windows.Forms.RadioButton But_high;
+        private System.Windows.Forms.RadioButton But_Low;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Txt_MName;
